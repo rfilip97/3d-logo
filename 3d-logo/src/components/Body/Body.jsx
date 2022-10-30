@@ -1,8 +1,7 @@
-import React from 'react';
-import './body.scss';
+import React from "react";
+import RLogo from "../Logos/RLogo/RLogo";
+import "./body.scss";
 
 export default function Body() {
-  return (
-    <div className='body'>#1</div>
-  )
+  return <RLogo />;
 }

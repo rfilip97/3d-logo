@@ -6,7 +6,9 @@ import './canvas.scss';
 export default function MainCanvas() {
   return (
     <div className='canvasWrapper'>
-      <Canvas style={{ background: "#ffffff" }}>
+      <Canvas>
+          <ambientLight color="white" intensity={0.03} />
+          <pointLight position={[0, 20, 10]} intensity={0.05} />
           <RLogo />
       </Canvas>
     </div>

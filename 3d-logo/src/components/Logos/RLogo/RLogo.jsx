@@ -12,14 +12,11 @@ export default function RLogo(props) {
   });
 
   return (
-    <>
-      <ambientLight />
-      <group {...props} dispose={null}>
-        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={0} />
-        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={1} />
-        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={2} />
-      </group>
-    </>
+    <group {...props} dispose={null}>
+      <RLogoMesh rotationWeight={rotationWeight} shapeIndex={0} />
+      <RLogoMesh rotationWeight={rotationWeight} shapeIndex={1} />
+      <RLogoMesh rotationWeight={rotationWeight} shapeIndex={2} />
+    </group>
   );
 }
 

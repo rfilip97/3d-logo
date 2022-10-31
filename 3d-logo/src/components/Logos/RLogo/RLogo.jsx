@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import RLogoMesh from "./RLogoMesh";
 
 export default function RLogo(props) {
-  const { nodes, materials } = useGLTF(
-    process.env.PUBLIC_URL + "models/r-logo/r-logo.glb"
-  );
-  const scaleWeight = 60;
   const [rotationWeight, setRotationWeight] = useState(0.17);
 
   useFrame(({ clock }) => {
@@ -18,24 +15,9 @@ export default function RLogo(props) {
     <>
       <ambientLight />
       <group {...props} dispose={null}>
-        <mesh
-          geometry={nodes.shape0.geometry}
-          material={materials["SVGMat.001"]}
-          rotation={[1.7, 0, rotationWeight]}
-          scale={scaleWeight}
-        />
-        <mesh
-          geometry={nodes.shape1.geometry}
-          material={materials["SVGMat.002"]}
-          rotation={[1.7, 0, rotationWeight]}
-          scale={scaleWeight}
-        />
-        <mesh
-          geometry={nodes.shape2.geometry}
-          material={materials["SVGMat.003"]}
-          rotation={[1.7, 0, rotationWeight]}
-          scale={scaleWeight}
-        />
+        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={0} />
+        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={1} />
+        <RLogoMesh rotationWeight={rotationWeight} shapeIndex={2} />
       </group>
     </>
   );

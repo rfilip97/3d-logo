@@ -6,7 +6,7 @@ import './canvas.scss';
 export default function MainCanvas() {
   return (
     <div className='canvasWrapper'>
-      <Canvas style={{ background: "#999999" }}>
+      <Canvas style={{ background: "#ffffff" }}>
           <RLogo />
       </Canvas>
     </div>

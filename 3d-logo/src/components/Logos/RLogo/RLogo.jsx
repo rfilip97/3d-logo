@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export default function Model(props) {
+export default function RLogo(props) {
   const { nodes, materials } = useGLTF(
     process.env.PUBLIC_URL + "models/r-logo/r-logo.glb"
   );

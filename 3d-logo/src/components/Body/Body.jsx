@@ -1,7 +1,7 @@
 import React from "react";
-import RLogo from "../Logos/RLogo/RLogo";
+import MainCanvas from "../Canvas/MainCanvas";
 import "./body.scss";
 
 export default function Body() {
-  return <RLogo />;
+  return <MainCanvas />;
 }
